@@ -1,0 +1,122 @@
+[
+  {
+    "id": "fruits",
+    "name": "Fruits",
+    "description": "Fresh and seasonal fruits",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🍎",
+    "iconName": "apple",
+    "color": "#FF6B6B",
+    "isActive": true,
+    "sortOrder": 1
+  },
+  {
+    "id": "vegetables",
+    "name": "Vegetables",
+    "description": "Fresh vegetables and greens",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🥬",
+    "iconName": "eco",
+    "color": "#4ECDC4",
+    "isActive": true,
+    "sortOrder": 2
+  },
+  {
+    "id": "dairy",
+    "name": "Dairy",
+    "description": "Milk, cheese, and dairy products",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🥛",
+    "iconName": "local_drink",
+    "color": "#FFE66D",
+    "isActive": true,
+    "sortOrder": 3
+  },
+  {
+    "id": "bakery",
+    "name": "Bakery",
+    "description": "Fresh bread, cakes, and baked goods",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🍞",
+    "iconName": "cake",
+    "color": "#FF8E53",
+    "isActive": true,
+    "sortOrder": 4
+  },
+  {
+    "id": "meat",
+    "name": "Meat & Poultry",
+    "description": "Fresh meat, chicken, and seafood",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🍖",
+    "iconName": "restaurant",
+    "color": "#D63031",
+    "isActive": true,
+    "sortOrder": 5
+  },
+  {
+    "id": "snacks",
+    "name": "Snacks",
+    "description": "Chips, crackers, and munchies",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🍿",
+    "iconName": "cookie",
+    "color": "#6C5CE7",
+    "isActive": true,
+    "sortOrder": 6
+  },
+  {
+    "id": "beverages",
+    "name": "Beverages",
+    "description": "Soft drinks, juices, and water",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🥤",
+    "iconName": "local_cafe",
+    "color": "#00B894",
+    "isActive": true,
+    "sortOrder": 7
+  },
+  {
+    "id": "household",
+    "name": "Household",
+    "description": "Home and kitchen essentials",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🏠",
+    "iconName": "home",
+    "color": "#FDCB6E",
+    "isActive": true,
+    "sortOrder": 8
+  },
+  {
+    "id": "personal_care",
+    "name": "Personal Care",
+    "description": "Health and personal hygiene",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🧴",
+    "iconName": "healing",
+    "color": "#E84393",
+    "isActive": true,
+    "sortOrder": 9
+  },
+  {
+    "id": "cleaning",
+    "name": "Cleaning",
+    "description": "Cleaning supplies and detergents",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🧽",
+    "iconName": "cleaning_services",
+    "color": "#A29BFE",
+    "isActive": true,
+    "sortOrder": 10
+  },
+  {
+    "id": "organic",
+    "name": "Organic",
+    "description": "Certified organic products",
+    "imageUrl": "https://via.placeholder.com/100x100?text=🌱",
+    "iconName": "eco",
+    "color": "#00B894",
+    "isActive": true,
+    "sortOrder": 11
+  },
+  {
+    "id": "health",
+    "name": "Health",
+    "description": "Health supplements and vitamins",
+    "imageUrl": "https://via.placeholder.com/100x100?text=💊",
+    "iconName": "local_pharmacy",
+    "color": "#0984E3",
+    "isActive": true,
+    "sortOrder": 12
+  }
+]

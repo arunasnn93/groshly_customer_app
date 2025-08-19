@@ -1,0 +1,171 @@
+[
+  {
+    "id": "store_1",
+    "name": "FreshMart Koramangala",
+    "description": "Fresh fruits, vegetables and daily essentials",
+    "imageUrl": "https://via.placeholder.com/300x200?text=FreshMart",
+    "rating": 4.5,
+    "totalRatings": 1250,
+    "deliveryTime": 25,
+    "deliveryFee": 30,
+    "minimumOrder": 199,
+    "distance": 0.8,
+    "isOpen": true,
+    "openingTime": "06:00",
+    "closingTime": "23:00",
+    "categories": ["fruits", "vegetables", "dairy", "snacks"],
+    "address": {
+      "street": "123 Koramangala 5th Block",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560095",
+      "coordinates": {
+        "latitude": 12.9352,
+        "longitude": 77.6245
+      }
+    },
+    "offers": [
+      {
+        "id": "offer_1",
+        "title": "20% off on first order",
+        "description": "Get 20% discount on your first order above ₹299",
+        "discountPercentage": 20,
+        "minimumOrder": 299,
+        "maxDiscount": 100
+      }
+    ]
+  },
+  {
+    "id": "store_2",
+    "name": "Green Valley Organic",
+    "description": "100% organic fruits and vegetables",
+    "imageUrl": "https://via.placeholder.com/300x200?text=Green+Valley",
+    "rating": 4.7,
+    "totalRatings": 890,
+    "deliveryTime": 35,
+    "deliveryFee": 25,
+    "minimumOrder": 249,
+    "distance": 1.2,
+    "isOpen": true,
+    "openingTime": "07:00",
+    "closingTime": "22:00",
+    "categories": ["organic", "fruits", "vegetables"],
+    "address": {
+      "street": "456 HSR Layout Sector 2",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560102",
+      "coordinates": {
+        "latitude": 12.9139,
+        "longitude": 77.6421
+      }
+    },
+    "offers": [
+      {
+        "id": "offer_2",
+        "title": "Free delivery above ₹399",
+        "description": "No delivery charges on orders above ₹399",
+        "freeDelivery": true,
+        "minimumOrder": 399
+      }
+    ]
+  },
+  {
+    "id": "store_3",
+    "name": "QuickStop Mart",
+    "description": "Quick delivery in 15 minutes",
+    "imageUrl": "https://via.placeholder.com/300x200?text=QuickStop",
+    "rating": 4.3,
+    "totalRatings": 2100,
+    "deliveryTime": 15,
+    "deliveryFee": 35,
+    "minimumOrder": 149,
+    "distance": 0.5,
+    "isOpen": true,
+    "openingTime": "00:00",
+    "closingTime": "23:59",
+    "categories": ["convenience", "snacks", "beverages", "dairy"],
+    "address": {
+      "street": "789 BTM Layout 1st Stage",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560029",
+      "coordinates": {
+        "latitude": 12.9165,
+        "longitude": 77.6101
+      }
+    },
+    "offers": [
+      {
+        "id": "offer_3",
+        "title": "Buy 2 Get 1 Free",
+        "description": "Buy any 2 beverages and get 1 free",
+        "buyQuantity": 2,
+        "freeQuantity": 1,
+        "applicableCategories": ["beverages"]
+      }
+    ]
+  },
+  {
+    "id": "store_4",
+    "name": "Healthy Choice",
+    "description": "Healthy and nutritious food options",
+    "imageUrl": "https://via.placeholder.com/300x200?text=Healthy+Choice",
+    "rating": 4.6,
+    "totalRatings": 670,
+    "deliveryTime": 30,
+    "deliveryFee": 40,
+    "minimumOrder": 299,
+    "distance": 1.8,
+    "isOpen": false,
+    "openingTime": "08:00",
+    "closingTime": "21:00",
+    "categories": ["health", "organic", "supplements"],
+    "address": {
+      "street": "321 Indiranagar 100 Feet Road",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560038",
+      "coordinates": {
+        "latitude": 12.9784,
+        "longitude": 77.6408
+      }
+    },
+    "offers": []
+  },
+  {
+    "id": "store_5",
+    "name": "Daily Needs",
+    "description": "Everything you need for daily life",
+    "imageUrl": "https://via.placeholder.com/300x200?text=Daily+Needs",
+    "rating": 4.2,
+    "totalRatings": 1840,
+    "deliveryTime": 40,
+    "deliveryFee": 20,
+    "minimumOrder": 199,
+    "distance": 2.1,
+    "isOpen": true,
+    "openingTime": "06:30",
+    "closingTime": "22:30",
+    "categories": ["household", "personal_care", "cleaning"],
+    "address": {
+      "street": "654 Jayanagar 4th Block",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "560011",
+      "coordinates": {
+        "latitude": 12.9279,
+        "longitude": 77.5937
+      }
+    },
+    "offers": [
+      {
+        "id": "offer_4",
+        "title": "10% off on household items",
+        "description": "Get 10% discount on all household items",
+        "discountPercentage": 10,
+        "applicableCategories": ["household", "cleaning"]
+      }
+    ]
+  }
+]
