@@ -54,7 +54,8 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: colorScheme,
-      fontFamily: 'SF Pro Display',
+      // Use system font for now until custom font is added
+      // fontFamily: 'SF Pro Display',
       
       // AppBar theme
       appBarTheme: const AppBarTheme(
@@ -206,7 +207,8 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: colorScheme,
-      fontFamily: 'SF Pro Display',
+      // Use system font for now until custom font is added
+      // fontFamily: 'SF Pro Display',
       
       // AppBar theme
       appBarTheme: const AppBarTheme(
@@ -231,88 +233,222 @@ class AppTheme {
         margin: const EdgeInsets.all(8),
       ),
       
-      // Similar configurations for other components adapted for dark mode
-      // ... (rest of the dark theme configuration)
+      // Elevated button theme
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: primaryLightColor,
+          foregroundColor: Colors.black,
+          elevation: 2,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          textStyle: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      
+      // Outlined button theme
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: primaryLightColor,
+          side: const BorderSide(color: primaryLightColor),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          textStyle: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      
+      // Text button theme
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: primaryLightColor,
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          textStyle: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      
+      // Input decoration theme
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: const Color(0xFF2C2C2C),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: Color(0xFF404040)),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: Color(0xFF404040)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: primaryLightColor, width: 2),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: errorLightColor),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: const BorderSide(color: errorLightColor, width: 2),
+        ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        hintStyle: const TextStyle(color: Color(0xFF888888)),
+        labelStyle: const TextStyle(color: Colors.white),
+      ),
+      
+      // Bottom navigation bar theme
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: Color(0xFF1E1E1E),
+        selectedItemColor: primaryLightColor,
+        unselectedItemColor: Color(0xFF888888),
+        type: BottomNavigationBarType.fixed,
+        elevation: 8,
+      ),
+      
+      // Floating action button theme
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: primaryLightColor,
+        foregroundColor: Colors.black,
+      ),
+      
+      // Chip theme
+      chipTheme: ChipThemeData(
+        backgroundColor: const Color(0xFF2C2C2C),
+        selectedColor: primaryLightColor,
+        labelStyle: const TextStyle(color: Colors.white),
+        secondaryLabelStyle: const TextStyle(color: Colors.black),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+      ),
+      
+      // Divider theme
+      dividerTheme: const DividerThemeData(
+        color: Color(0xFF404040),
+        thickness: 1,
+        space: 1,
+      ),
+      
+      // Text theme for dark mode
+      textTheme: const TextTheme(
+        displayLarge: TextStyle(color: Colors.white),
+        displayMedium: TextStyle(color: Colors.white),
+        displaySmall: TextStyle(color: Colors.white),
+        headlineLarge: TextStyle(color: Colors.white),
+        headlineMedium: TextStyle(color: Colors.white),
+        headlineSmall: TextStyle(color: Colors.white),
+        titleLarge: TextStyle(color: Colors.white),
+        titleMedium: TextStyle(color: Colors.white),
+        titleSmall: TextStyle(color: Colors.white),
+        bodyLarge: TextStyle(color: Colors.white),
+        bodyMedium: TextStyle(color: Colors.white),
+        bodySmall: TextStyle(color: Color(0xFFBBBBBB)),
+        labelLarge: TextStyle(color: Colors.white),
+        labelMedium: TextStyle(color: Colors.white),
+        labelSmall: TextStyle(color: Color(0xFFBBBBBB)),
+      ),
     );
   }
 }
 
 /// Text styles used throughout the app
+/// Note: These styles should be used with Theme.of(context).textTheme for automatic dark mode support
 class AppTextStyles {
-  // Headings
+  // Headings - use theme colors for automatic dark mode support
   static const TextStyle heading1 = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.bold,
-    color: AppTheme.textPrimary,
+    // Remove hardcoded color - will use theme's onSurface color
   );
   
   static const TextStyle heading2 = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
-    color: AppTheme.textPrimary,
+    // Remove hardcoded color - will use theme's onSurface color
   );
   
   static const TextStyle heading3 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w600,
-    color: AppTheme.textPrimary,
+    // Remove hardcoded color - will use theme's onSurface color
   );
   
   static const TextStyle heading4 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: AppTheme.textPrimary,
+    // Remove hardcoded color - will use theme's onSurface color
   );
   
-  // Body text
+  // Body text - theme-aware
   static const TextStyle bodyLarge = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
-    color: AppTheme.textPrimary,
+    // Remove hardcoded color - will use theme's onSurface color
   );
   
   static const TextStyle bodyMedium = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal,
-    color: AppTheme.textPrimary,
+    // Remove hardcoded color - will use theme's onSurface color
   );
   
   static const TextStyle bodySmall = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.normal,
-    color: AppTheme.textSecondary,
+    // Will use theme's onSurface color with reduced opacity
   );
   
   // Caption and labels
   static const TextStyle caption = TextStyle(
     fontSize: 10,
     fontWeight: FontWeight.normal,
-    color: AppTheme.textSecondary,
+    // Will use theme's onSurface color with reduced opacity
   );
   
   static const TextStyle label = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: AppTheme.textPrimary,
+    // Remove hardcoded color - will use theme's onSurface color
   );
   
-  // Button text
+  // Button text - context dependent
   static const TextStyle button = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: Colors.white,
+    // Color should be set based on button background
   );
   
-  // Price text
-  static const TextStyle price = TextStyle(
+  // Price text with theme-aware primary color
+  static TextStyle price(BuildContext context) => TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.bold,
-    color: AppTheme.primaryColor,
+    color: Theme.of(context).colorScheme.primary,
   );
   
-  static const TextStyle priceSmall = TextStyle(
+  static TextStyle priceSmall(BuildContext context) => TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.bold,
-    color: AppTheme.primaryColor,
+    color: Theme.of(context).colorScheme.primary,
   );
+  
+  // Helper methods for theme-aware colors
+  static TextStyle withPrimaryColor(TextStyle style, BuildContext context) {
+    return style.copyWith(color: Theme.of(context).colorScheme.primary);
+  }
+  
+  static TextStyle withSecondaryColor(TextStyle style, BuildContext context) {
+    return style.copyWith(color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6));
+  }
 }

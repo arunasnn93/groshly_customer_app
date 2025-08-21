@@ -426,7 +426,7 @@ class HomePage extends ConsumerWidget {
                         const SizedBox(height: 4),
                         Text(
                           '₹${(index + 1) * 50}',
-                          style: AppTextStyles.price,
+                          style: AppTextStyles.price(context),
                         ),
                       ],
                     ),
