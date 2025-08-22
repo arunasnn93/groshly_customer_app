@@ -68,12 +68,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 24),
                   
                   // Logo and title
                   _buildHeader(),
                   
-                  const SizedBox(height: 48),
+                  const SizedBox(height: 32),
                   
                   // Sign in/up toggle
                   _buildModeToggle(),
@@ -189,36 +189,32 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   Widget _buildHeader() {
     return Column(
       children: [
-        // Logo placeholder
-        Container(
-          width: 80,
-          height: 80,
-          decoration: BoxDecoration(
-            color: AppTheme.primaryColor,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: const Icon(
-            Icons.shopping_bag_outlined,
-            color: Colors.white,
-            size: 40,
+        // App logo
+        ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          child: Image.asset(
+            'assets/icons/app_icon.png',
+            width: 64,
+            height: 64,
+            fit: BoxFit.cover,
           ),
         ),
         
-        const SizedBox(height: 24),
+        const SizedBox(height: 16),
         
         Text(
           AppConstants.appName,
-          style: AppTextStyles.heading1.copyWith(
+          style: AppTextStyles.heading2.copyWith(
             color: AppTheme.primaryColor,
             fontWeight: FontWeight.bold,
           ),
         ),
         
-        const SizedBox(height: 8),
+        const SizedBox(height: 4),
         
         Text(
           AppConstants.appTagline,
-          style: AppTextStyles.bodyMedium.copyWith(
+          style: AppTextStyles.bodySmall.copyWith(
             color: AppTheme.textSecondary,
           ),
           textAlign: TextAlign.center,
