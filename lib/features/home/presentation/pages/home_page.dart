@@ -123,14 +123,8 @@ class HomePage extends ConsumerWidget {
             // Location banner
             _buildLocationBanner(context),
             
-            // Categories
-            _buildCategoriesSection(context),
-            
             // Nearby stores
             _buildNearbyStoresSection(context),
-            
-            // Featured products
-            _buildFeaturedProductsSection(context),
           ],
         ),
       ),
@@ -211,67 +205,7 @@ class HomePage extends ConsumerWidget {
     );
   }
 
-  Widget _buildCategoriesSection(BuildContext context) {
-    final categories = [
-      {'name': 'Fruits', 'icon': Icons.apple},
-      {'name': 'Vegetables', 'icon': Icons.eco},
-      {'name': 'Dairy', 'icon': Icons.local_drink},
-      {'name': 'Bakery', 'icon': Icons.cake},
-      {'name': 'Meat', 'icon': Icons.restaurant},
-      {'name': 'Snacks', 'icon': Icons.cookie},
-    ];
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(16),
-          child: Text(
-            'Categories',
-            style: AppTextStyles.heading4,
-          ),
-        ),
-        SizedBox(
-          height: 100,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            itemCount: categories.length,
-            itemBuilder: (context, index) {
-              final category = categories[index];
-              return Container(
-                width: 80,
-                margin: const EdgeInsets.only(right: 12),
-                child: Column(
-                  children: [
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        color: AppTheme.primaryLightColor.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Icon(
-                        category['icon'] as IconData,
-                        color: AppTheme.primaryColor,
-                        size: 28,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      category['name'] as String,
-                      style: AppTextStyles.bodySmall,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              );
-            },
-          ),
-        ),
-      ],
-    );
-  }
 
   Widget _buildNearbyStoresSection(BuildContext context) {
     return Column(
@@ -363,78 +297,6 @@ class HomePage extends ConsumerWidget {
               );
             },
           ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildFeaturedProductsSection(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(16),
-          child: Text(
-            'Featured Products',
-            style: AppTextStyles.heading4,
-          ),
-        ),
-        GridView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 0.8,
-            crossAxisSpacing: 12,
-            mainAxisSpacing: 12,
-          ),
-          itemCount: 6,
-          itemBuilder: (context, index) {
-            return Card(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: const BorderRadius.vertical(
-                          top: Radius.circular(8),
-                        ),
-                      ),
-                      child: const Center(
-                        child: Icon(
-                          Icons.shopping_basket,
-                          size: 40,
-                          color: AppTheme.textSecondary,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Product ${index + 1}',
-                          style: AppTextStyles.bodyMedium.copyWith(
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          '₹${(index + 1) * 50}',
-                          style: AppTextStyles.price(context),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
         ),
         const SizedBox(height: 80), // Space for bottom navigation
       ],
